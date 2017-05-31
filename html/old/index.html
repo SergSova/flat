@@ -1,0 +1,639 @@
+[[$head]]
+</head>
+<body>
+<header>
+    [[$menu]]
+</header>
+<section class="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 col-sm-offset-5 col-lg-2 col-lg-offset-5">
+                <img class="logo" src="assets/images/flat_logo.png" alt="логотип">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1 col-sm-offset-6 col-lg-1 col-lg-offset-6">
+                <div class="line"></div>
+                <div class="rhomb"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h1>Квартиры посуточно <br>в Киеве</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container one">
+        <div class="row">
+            [[!main-filter-init]]
+            <div class="col-lg-12 make_position">
+                <div class="choose1">
+                    <p class="labell">дата посещения</p>
+                    <div class="calendar">
+                        <p>11.02/13.02.2017</p>
+                    </div>
+                </div>
+                <div class="choose2">
+                    <p class="labell">количество комнат</p>
+                    <input type="checkbox" id="room-1" name="rooms[]" value="1"/>
+                    <label for="room-1"><span></span></label>
+                    <input type="checkbox" id="room-2" name="rooms[]" value="2"/>
+                    <label for="room-2"><span></span></label>
+                    <input type="checkbox" id="room-3" name="rooms[]" value="3"/>
+                    <label for="room-3"><span></span></label>
+                    <input type="checkbox" id="room-4" name="rooms[]" value=":>=:4"/>
+                    <label for="room-4"><span></span></label>
+                </div>
+                <div class="choose3">
+                    <div>
+                        <p class="labell">стоимость</p>
+                        <input type="checkbox" id="price-one" name="price" value=":<<:[[#6.price-from]]"/>
+                        <label for="price-one"><span></span></label>
+                        <input type="checkbox" id="price-two" name="price"
+                               value=":>=:[[#6.price-from]]||:<=:[[#6.price-from-to]]"/>
+                        <label for="price-two"><span></span></label>
+                        <input type="checkbox" id="price-three" name="price" value=":>>:[[#6.price-from-to]]"/>
+                        <label for="price-three"><span></span></label>
+                    </div>
+                    <div>
+                        <p class="labell">все</p>
+                        <input type="checkbox" id="all" name="allchecked"/>
+                        <label for="all"><span></span></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="additional">дополнительные параметры <img src="assets/images/arrow.png"></a>
+        <div class="row show_add">
+            <div class="col-lg-12">
+                <div class="choose4">
+                    <div class="form-group">
+                        <form class="filtr_flat">
+                            <div class="multiselect">
+                                <div class="selectBox">
+                                    <div class="overSelect form-control"><span>Метро</span></div>
+                                </div>
+                                <div class="checkboxes">
+                                    [[+metro_options]]
+                                    <!--<label><input type="checkbox"/><span class="otstup">м.Житомиркая</span></label>-->
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="choose4">
+                    <div class="form-group">
+                        <form class="filtr_flat">
+                            <div class="multiselect">
+                                <div class="selectBox">
+                                    <div class="overSelect form-control"><span>Улица</span></div>
+                                </div>
+                                <div class="checkboxes">
+                                    [[+street_options]]
+                                    <!--<label><input type="checkbox"/><span class="otstup">Саксаганского</span></label>-->
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="choose4">
+                    <div class="form-group">
+                        <form class="filtr_flat">
+                            <div class="multiselect">
+                                <div class="selectBox">
+                                    <div class="overSelect form-control"><span>Удобства</span></div>
+                                </div>
+                                <div class="checkboxes">
+                                    [[+facilites_options]]
+                                    <!--<label><input type="checkbox"/><span class="otstup">Парк</span></label>-->
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="choose4">
+                    <div class="form-group">
+                        <form class="filtr_flat">
+                            <div class="multiselect">
+                                <div class="selectBox">
+                                    <div class="overSelect form-control"><span>Дополнительно</span></div>
+                                </div>
+                                <div class="checkboxes">
+                                    [[+additional_rules]]
+                                    <!--<label><input type="checkbox"/><span class="otstup">Домработница</span></label>-->
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <a href="javascript:void(0);" class="additional">свернуть <img src="assets/images/arrow_up.png"></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 col-sm-offset-4 col-lg-3 col-lg-offset-5">
+                <div class="but_border">
+                    <button class="select">Подобрать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page_akcii">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1 col-sm-offset-6 col-lg-1 col-lg-offset-6">
+                <div class="line"></div>
+                <div class="rhomb"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h1>Акционные <br>предложения</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1 col-sm-offset-6 col-lg-1 col-lg-offset-6">
+                <div class="line3"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container no_padding">
+        <div class="row">
+            <div class="col-lg-12 no_padding">
+                <div class="col-sm-4 col-lg-4 flat_block flat_block_image2">
+                    <!-- make a slider flats -->
+                    <div class="col-lg-12 flat_block flat_block_image3 slick_flat_slider">
+                        <div class="img-holder img-holder-1"><img src="assets/images/flat2.png"></div>
+                        <div class="img-holder img-holder-2"><img src="assets/images/slider2.jpg"></div>
+                        <div class="img-holder img-holder-3"><img src="assets/images/slider3.jpg"></div>
+                    </div>
+                    <!-- end make a slider flats -->
+
+                    <!--absolute block info -->
+                    <div class="info_abs">
+                        <div class="info">
+                            <h4>Квартира <br> в ценрте города</h4>
+                            <p>ул. Красноармейская 11<br> м.Льва Толстого</p>
+                            <div class="small_info">
+                                <span>3</span>
+                                <span>2</span>
+                                <span>9</span>
+                            </div>
+                            <div class="price-1">
+                                <p><span class="font-s">2000</span>грн/сутки</p>
+                                <p><span>1500</span>грн/сутки</p>
+                            </div>
+                            <div class="but_border">
+                                <button class="select">Бронировать</button>
+                            </div>
+                            <div class="but_border">
+                                <button class="select">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- end absolute block info -->
+
+                    <!-- absolute block price -->
+                    <div class="price_abs">
+                        <div class="price">
+                            <p><span class="font-s">2000</span>грн/сутки</p>
+                            <p><span>1500</span>грн/сутки</p>
+                        </div>
+                    </div>
+                    <!-- end absolute block price -->
+
+                    <!-- absolute block like -->
+                    <div class="like_abs">
+                        <div class="like"></div>
+                    </div>
+                    <!-- end absolute block like -->
+                    <div class="plag top"></div>
+                </div>
+                <div class="col-sm-4 col-lg-4 flat_block flat_block_image2">
+                    <!-- make a slider flats -->
+                    <div class="col-lg-12 flat_block flat_block_image3 slick_flat_slider">
+                        <div class="img-holder img-holder-1"><img src="assets/images/flat2.png"></div>
+                        <div class="img-holder img-holder-2"><img src="assets/images/slider2.jpg"></div>
+                        <div class="img-holder img-holder-3"><img src="assets/images/slider3.jpg"></div>
+                    </div>
+                    <!-- end make a slider flats -->
+
+                    <!--absolute block info -->
+                    <div class="info_abs">
+                        <div class="info">
+                            <h4>Квартира <br> в ценрте города</h4>
+                            <p>ул. Красноармейская 11<br> м.Льва Толстого</p>
+                            <div class="small_info">
+                                <span class="rooms">3</span>
+                                <span class="beds">2</span>
+                                <span class="comments">9</span>
+                            </div>
+                            <div class="price-1">
+                                <p><span class="font-s">2000</span>грн/сутки</p>
+                                <p><span>1500</span>грн/сутки</p>
+                            </div>
+                            <div class="but_border">
+                                <button class="select">Бронировать</button>
+                            </div>
+                            <div class="but_border">
+                                <button class="select">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- end absolute block info -->
+
+                    <!-- absolute block price -->
+                    <div class="price_abs">
+                        <div class="price">
+                            <p><span class="font-s">2000</span>грн/сутки</p>
+                            <p><span>1500</span>грн/сутки</p>
+                        </div>
+                    </div>
+                    <!-- end absolute block price -->
+
+                    <!-- absolute block like -->
+                    <div class="like_abs">
+                        <div class="like"></div>
+                    </div>
+                    <!-- end absolute block like -->
+                    <div class="plag hot"></div>
+                </div>
+                <div class="col-sm-4 col-lg-4 flat_block flat_block_image2">
+                    <!-- make a slider flats -->
+                    <div class="col-lg-12 flat_block flat_block_image3 slick_flat_slider">
+                        <div class="img-holder img-holder-1"><img src="assets/images/flat2.png"></div>
+                        <div class="img-holder img-holder-2"><img src="assets/images/slider2.jpg"></div>
+                        <div class="img-holder img-holder-3"><img src="assets/images/slider3.jpg"></div>
+                    </div>
+                    <!-- end make a slider flats -->
+
+                    <!--absolute block info -->
+                    <div class="info_abs">
+                        <div class="info">
+                            <h4>Квартира <br> в ценрте города</h4>
+                            <p>ул. Красноармейская 11<br> м.Льва Толстого</p>
+                            <div class="small_info">
+                                <span class="rooms">3</span>
+                                <span class="beds">2</span>
+                                <span class="comments">9</span>
+                            </div>
+                            <div class="price-1">
+                                <p><span class="font-s">2000</span>грн/сутки</p>
+                                <p><span>1500</span>грн/сутки</p>
+                            </div>
+                            <div class="but_border">
+                                <button class="select">Бронировать</button>
+                            </div>
+                            <div class="but_border">
+                                <button class="select">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- end absolute block info -->
+
+                    <!-- absolute block price -->
+                    <div class="price_abs">
+                        <div class="price">
+                            <p><span class="font-s">2000</span>грн/сутки</p>
+                            <p><span>1500</span>грн/сутки</p>
+                        </div>
+                    </div>
+                    <!-- end absolute block price -->
+
+                    <!-- absolute block like -->
+                    <div class="like_abs">
+                        <div class="like"></div>
+                    </div>
+                    <!-- end absolute block like -->
+                    <div class="plag new"></div>
+                </div>
+                <div class="col-sm-4 col-lg-4 flat_block flat_block_image2">
+                    <!-- make a slider flats -->
+                    <div class="col-lg-12 flat_block flat_block_image3 slick_flat_slider">
+                        <div class="img-holder img-holder-1"><img src="assets/images/flat2.png"></div>
+                        <div class="img-holder img-holder-2"><img src="assets/images/slider2.jpg"></div>
+                        <div class="img-holder img-holder-3"><img src="assets/images/slider3.jpg"></div>
+                    </div>
+                    <!-- end make a slider flats -->
+
+                    <!--absolute block info -->
+                    <div class="info_abs">
+                        <div class="info">
+                            <h4>Квартира <br> в ценрте города</h4>
+                            <p>ул. Красноармейская 11<br> м.Льва Толстого</p>
+                            <div class="small_info">
+                                <span class="rooms">3</span>
+                                <span class="beds">2</span>
+                                <span class="comments">9</span>
+                            </div>
+                            <div class="price-1">
+                                <p><span class="font-s">2000</span>грн/сутки</p>
+                                <p><span>1500</span>грн/сутки</p>
+                            </div>
+                            <div class="but_border">
+                                <button class="select">Бронировать</button>
+                            </div>
+                            <div class="but_border">
+                                <button class="select">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- end absolute block info -->
+
+                    <!-- absolute block price -->
+                    <div class="price_abs">
+                        <div class="price">
+                            <p><span class="font-s">2000</span>грн/сутки</p>
+                            <p><span>1500</span>грн/сутки</p>
+                        </div>
+                    </div>
+                    <!-- end absolute block price -->
+
+                    <!-- absolute block like -->
+                    <div class="like_abs">
+                        <div class="like"></div>
+                    </div>
+                    <!-- end absolute block like -->
+                </div>
+                <div class="col-sm-4 col-lg-4 flat_block flat_block_image2">
+                    <!-- make a slider flats -->
+                    <div class="col-lg-12 flat_block flat_block_image3 slick_flat_slider">
+                        <div class="img-holder img-holder-1"><img src="assets/images/flat2.png"></div>
+                        <div class="img-holder img-holder-2"><img src="assets/images/slider2.jpg"></div>
+                        <div class="img-holder img-holder-3"><img src="assets/images/slider3.jpg"></div>
+                    </div>
+                    <!-- end make a slider flats -->
+
+                    <!--absolute block info -->
+                    <div class="info_abs">
+                        <div class="info">
+                            <h4>Квартира <br> в ценрте города</h4>
+                            <p>ул. Красноармейская 11<br> м.Льва Толстого</p>
+                            <div class="small_info">
+                                <span class="rooms">3</span>
+                                <span class="beds">2</span>
+                                <span class="comments">9</span>
+                            </div>
+                            <div class="price-1">
+                                <p><span class="font-s">2000</span>грн/сутки</p>
+                                <p><span>1500</span>грн/сутки</p>
+                            </div>
+                            <div class="but_border">
+                                <button class="select">Бронировать</button>
+                            </div>
+                            <div class="but_border">
+                                <button class="select">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- end absolute block info -->
+
+                    <!-- absolute block price -->
+                    <div class="price_abs">
+                        <div class="price">
+                            <p><span class="font-s">2000</span>грн/сутки</p>
+                            <p><span>1500</span>грн/сутки</p>
+                        </div>
+                    </div>
+                    <!-- end absolute block price -->
+
+                    <!-- absolute block like -->
+                    <div class="like_abs">
+                        <div class="like"></div>
+                    </div>
+                    <!-- end absolute block like -->
+                </div>
+                <div class="col-sm-4 col-lg-4 flat_block flat_block_image2">
+                    <!-- make a slider flats -->
+                    <div class="col-lg-12 flat_block flat_block_image3 slick_flat_slider">
+                        <div class="img-holder img-holder-1"><img src="assets/images/flat2.png"></div>
+                        <div class="img-holder img-holder-2"><img src="assets/images/slider2.jpg"></div>
+                        <div class="img-holder img-holder-3"><img src="assets/images/slider3.jpg"></div>
+                    </div>
+                    <!-- end make a slider flats -->
+
+                    <!--absolute block info -->
+                    <div class="info_abs">
+                        <div class="info">
+                            <h4>Квартира <br> в ценрте города</h4>
+                            <p>ул. Красноармейская 11<br> м.Льва Толстого</p>
+                            <div class="small_info">
+                                <span class="rooms">3</span>
+                                <span class="beds">2</span>
+                                <span class="comments">9</span>
+                            </div>
+                            <div class="price-1">
+                                <p><span class="font-s">2000</span>грн/сутки</p>
+                                <p><span>1500</span>грн/сутки</p>
+                            </div>
+                            <div class="but_border">
+                                <button class="select">Бронировать</button>
+                            </div>
+                            <div class="but_border">
+                                <button class="select">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- end absolute block info -->
+
+                    <!-- absolute block price -->
+                    <div class="price_abs">
+                        <div class="price">
+                            <p><span class="font-s">2000</span>грн/сутки</p>
+                            <p><span>1500</span>грн/сутки</p>
+                        </div>
+                    </div>
+                    <!-- end absolute block price -->
+
+                    <!-- absolute block like -->
+                    <div class="like_abs">
+                        <div class="like"></div>
+                    </div>
+                    <!-- end absolute block like -->
+                </div>
+            </div>
+        </div>
+        <div class="container lines">
+            <div class="row">
+                <div class="col-sm-1 col-sm-offset-6 col-lg-1 col-lg-offset-6">
+                    <div class="line1"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-6 col-lg-3 col-lg-offset-6">
+                    <p class="to_top">Все акционные квартиры</p>
+                    <div class="up hovicon effect-1 sub-a"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1 col-sm-offset-6 col-lg-1 col-lg-offset-6">
+                    <div class="rhomb"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+</section>
+[[!getResources? &resources=`50` &incudeTVs=`1` &tvPrefix=`` &tpl=`rules_chank`]]
+[[!getResources? &resources=`51` &incudeTVs=`1` &tvPrefix=`` &tpl=`about_chank`]]
+[[!getResources? &resources=`52` &incudeTVs=`1` &tvPrefix=`` &tpl=`turistam_chank`]]
+<section class="page_news">
+    <div class="container line_wr">
+        <div class="row">
+            <div class="col-lg-1 col-lg-offset-6">
+                <div class="line"></div>
+                <div class="rhomb"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h1>Наши новости</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container lines">
+        <div class="row">
+            <div class="col-lg-1 col-lg-offset-6">
+                <div class="rhomb"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="popup_callback">
+            <h6>Обратный звонок</h6>
+            <form class="form1">
+                <input type="number" name="phone" placeholder="ВАШ НОМЕР ТЕЛЕФОНА">
+            </form>
+            <div class="but_border">
+                <button class="select">задать вопрос</button>
+            </div>
+            <div class="close_popup">
+                <a href="javascript:void(0)"></a>
+            </div>
+        </div>
+    </section>
+    <section class="page_contacts">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1 col-lg-offset-6">
+                    <div class="line"></div>
+                    <div class="rhomb"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h1>Наши контакты</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 contacts">
+                    <p>Так же Вы можете задать любые интересующие <br>Вас вопросы по номеру или почте:</p>
+                    <div class="calll">
+                        <span class="perenos">+38(044) 222-6882</span>
+                        <span class="perenos">+38(067) 238-4345</span>
+                        <span class="perenos">+38(050) 393-2111</span>
+                    </div>
+                    <div>
+                        <span>email:</span>
+                        <p>flatkievposutochno@gmail.com</p>
+                    </div>
+                    <div>
+                        <span>skype:</span>
+                        <p>flat-kiev.com </p>
+                    </div>
+                    <div>
+                        <span>г.Киев
+                        , ул. Саксаганского, 121</span>
+                    </div>
+                    <div>
+                        <span>понедельник - пятница:</span>
+                        <p> 09:00 - 21:00 </p>
+                    </div>
+                    <div>
+                        <span>суббота - воскресенье: </span>
+                        <p>10:00 - 19:00 </p>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-lg-offset-0">
+                    <div id="map_contacts"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-4">
+                    <h4 class="rules">Оставьте заявку</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 form">
+                    <form class="form1">
+                        <input type="text" name="name" placeholder="Ф.И.О.">
+                        <input type="email" name="email" placeholder="E-MAIL">
+                        <input type="number" name="phone" placeholder="ТЕЛЕФОН">
+                    </form>
+                </div>
+                <div class="col-lg-3 col-lg-offset-5">
+                    <div class="but_border">
+                        <button class="select">Оставить заявку</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="overlay"></div>
+    <footer>
+        <div class="container">
+            <img class="logo" src="assets/images/flat_logo.png" alt="логотип">
+            <ul>
+                <li><a href="#">Подбор квартир</a></li>
+                <li><a href="#">Акции</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">О сервисе</a></li>
+                <li><a href="#">Правила и вопросы</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Туризм</a></li>
+                <li><a href="#">Новости</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Контакты</a></li>
+                <li><a class="call" href="#">Обратная связь</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <p class="rights">© Все права защищены.</p>
+        </div>
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuKGM5Uyp8zEcgsODy7nxVwFIEgEgLJ_k"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/plagins/slick/slick/slick.min.js"></script>
+    <script src="assets/plagins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+</body>
+</html>
