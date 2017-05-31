@@ -1,0 +1,1 @@
+<p class="call [[+_first:is=`1`:then=`main`:else=`clhide`]]">+38[[+phone]] [[+_first:is=`1`:then=`<img src="assets/images/arrow.png">`]]</p>

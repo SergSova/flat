@@ -1,0 +1,1 @@
+<div class="romb romb_[[+idx]]" data-parent="[[+id]]"><p>[[+pagetitle]]</p></div>

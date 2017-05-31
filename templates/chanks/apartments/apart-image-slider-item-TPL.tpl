@@ -1,0 +1,1 @@
+<div class="[[*parent:is=`6`:then=`slider_image slider_image`:else=`img-holder img-holder`]]-[[+idx]]"><img src="[[+image]]"></div>

@@ -1,0 +1,63 @@
+[[!Profile]]
+<a href="[[~88]]" >Редактировать</a>
+<div class="form-horizontal well">
+<div class="row-fluid">
+<div class="span8 offset2">
+  <div class="clearfix">
+    <label style="width: 170px;" class="control-label" for="fullname">Имя, фамилия</label>
+    <div class="input" style="margin-left: 180px;">
+      <p style="margin-top: 6px; font-weight: bold;">[[+fullname]]</p>
+    </div>
+  </div>
+  <div class="clearfix">
+    <label style="width: 170px;" class="control-label" for="email">Email</label>
+    <div class="input" style="margin-left: 180px;">
+      <p style="margin-top: 6px;">[[+email]]</p>
+    </div>
+  </div>
+  <div class="clearfix">
+    <label style="width: 170px;" class="control-label" for="password">Пароль</label>
+    <div class="input" style="margin-left: 180px;">
+      <p style="margin-top: 6px;"><a href="[[~87]]">Изменить пароль</a></p>
+    </div>
+  </div>
+  [[+phone:notempty=`<div class="clearfix">
+    <label style="width: 170px;" class="control-label" for="phone">Телефон</label>
+    <div class="input" style="margin-left: 180px;">
+      <p style="margin-top: 6px;">[[+phone]]</p>
+    </div>
+  </div>`]]
+  [[+mobilephone:notempty=`<div class="clearfix">
+    <label style="width: 170px;" class="control-label" for="mobilephone">Мобильный телефон</label>
+    <div class="input" style="margin-left: 180px;">
+      <p style="margin-top: 6px;">[[+mobilephone]]</p>
+    </div>
+  </div>`]]
+  [[+country:notempty=`<div class="clearfix">
+    <label style="width: 170px;" class="control-label" for="country">Страна</label>
+    <div class="input" style="margin-left: 180px;">
+      <p style="margin-top: 6px;">[[+country:default=`Россия`]]</p>
+    </div>
+  </div>`]]
+  [[+city:notempty=`<div class="clearfix">
+    <label style="width: 170px;" class="control-label" for="city">Город</label>
+    <div class="input" style="margin-left: 180px;">
+      <p style="margin-top: 6px;">[[+city]]</p>
+    </div>
+  </div>`]]
+  [[+address:notempty=`<div class="clearfix">
+    <label style="width: 170px;" class="control-label" for="address">Адрес</label>
+    <div class="input" style="margin-left: 180px;">
+      <p style="margin-top: 6px;">[[+address]]</p>
+    </div>
+  </div>`]]
+  [[+website:notempty=`<div class="clearfix">
+    <label style="width: 170px;" class="control-label" for="website">Сайт</label>
+    <div class="input" style="margin-left: 180px;">
+      <p style="margin-top: 6px;">[[+website:notempty=`<a href="http://[[+website]]">[[+website]]</a>`]]</p>
+    </div>
+  </div>`]]
+  <a href="[[~84]]?service=logout">Выйти</a>
+</div>
+</div>
+</div>

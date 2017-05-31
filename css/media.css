@@ -1,0 +1,454 @@
+@media all and (min-width: 768px) and (max-width: 992px) {
+	.main h1 {
+    font-size: 36px;
+    letter-spacing: 6px;
+        margin-left: 36px;
+	}
+	.logo {
+   margin-left: -6px;
+	}
+	.line {
+    margin-left: -7px;
+	}
+	.rhomb {
+    margin-left: -12px;
+	}
+	.calendar {
+    width: 160px;
+	}
+	.choose1 {
+     margin-left: 0px; 
+	}
+	p.labell {
+    font-size: 12px;
+	}
+	.calendar p {
+    font-size: 13px;
+    padding-left: 33px;
+    padding-top: 8px;
+	}
+	.choose2 {
+        margin-left: 15px;
+    width: 49%;
+	}
+	input#room-1[type="checkbox"] + label span {
+	width: 39px;
+	margin: -1px 10px 0 0;
+	}
+		input#room-2[type="checkbox"] + label span {
+	width: 39px;
+	margin: -1px 10px 0 0;
+	}
+		input#room-3[type="checkbox"] + label span {
+	width: 39px;
+	margin: -1px 10px 0 0;
+	}
+		input#room-4[type="checkbox"] + label span {
+	width: 39px;
+	margin: -1px 10px 0 0;
+	}
+	input#price-one[type="checkbox"] + label span {
+    width: 47px;
+    background-position: -26px -0px;
+        margin: -1px 12px 0 0;
+	}
+	input#price-two[type="checkbox"] + label span {
+    width: 47px;
+    background-position: -25px -56px;
+        margin: -1px 12px 0 0;
+	}
+	input#price-three[type="checkbox"] + label span {
+    width: 47px;
+    background-position: -25px -112px;
+        margin: -1px 12px 0 0;
+	}
+	input#all[type="checkbox"] + label span {
+    width: 35px;
+    background-position: -26px -0px;
+        margin: -1px 12px 0 0;
+	}
+	.choose3 {
+    margin-left: 0px;
+    width: 48%;
+	}
+	.choose3 div:first-child {
+    margin-right: 30px;
+	}
+	.choose4 .form-control {
+    width: 160px;
+	}
+	.choose4 {
+    margin-left: 14px;
+	}
+	.choose4:nth-child(3) {
+    margin-left: 17px;
+	}
+	.choose4:nth-child(2) {
+    margin-left: 17px;
+	}
+	.choose4:nth-child(4) {
+	    margin-left: 17px;
+	}
+	.but_border {
+    margin-top: 35px;
+    margin-left: 6px;
+	}
+	button.select {
+    letter-spacing: 2.4px;
+	}
+	.call_right {
+    width: 27%;
+	}
+	.page_akcii h1 {
+    font-size: 24px;
+	}
+	.flat_block {
+    height: 320px;
+	}
+	.col-lg-12.no_padding {
+	    padding-right: 30px;
+	    padding-left: 30px;
+	}
+	.page_akcii .col-lg-12.no_padding {
+        padding-right: 30px;
+	    padding-left: 30px;
+	}
+	.col-sm-4.flat_block.flat_block_image2 {
+		padding-right: 10px;
+    	padding-left: 10px;
+	}
+	.plag {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 65px;
+    height: 65px;
+	}
+	.top,
+	.hot,
+	.new {
+    background-size: contain;
+	}
+	.price {
+    width: 147px;
+    height: 50px;
+    left: 10px;
+	}
+	.price p {
+    font-size: 10px;
+	}
+	.price span.font-s {
+    font-size: 12px;
+	}
+	.price p:last-child {
+    font-size: 12px;
+	}
+	.price span {
+    font-size: 13px;
+	}
+	.price p:last-child {
+    width: 74%;
+    font-size: 12px;
+    height: 23px;
+	}
+	.price p:first-child::before {
+    bottom: 7px;
+    width: 69px;
+	}
+	.like {
+    margin-top: 13px;
+    margin-left: 13px;
+    width: 18px;
+    height: 18px;
+    background: url(../images/like.png) no-repeat center center;
+    background-size: contain;
+	}
+	.like:hover {
+    background: url(../images/like_active.png) no-repeat center;
+     background-size: contain;
+	}
+	.info h4 {
+    font-size: 22px;
+    margin-top: 40px;
+	}
+	.info p {
+    font-size: 11px;
+    margin-top: 13px;
+    margin-top: -3px;
+	}
+	.small_info span {
+    font-size: 12px;
+	}
+	.small_info span:nth-child(1)::before {
+    width: 17px;
+    height: 21px;
+    bottom: -2px;
+    left: 12px;
+    background-size: contain;
+	}
+	.small_info span:nth-child(2)::before {
+    width: 25px;
+    height: 16px;
+    bottom: 0px;
+    background-size: contain;
+    left: 15px;
+	}
+	.small_info span:nth-child(3)::before {
+    width: 22px;
+    height: 17px;
+    bottom: -2px;
+    left: 13px;
+    background-size: contain;
+	}
+	.small_info {
+    width: 67%;
+    margin-left: 21%;
+        margin-top: 37px;
+	}
+	.small_info span:nth-child(2) {
+    margin-left: 6px;
+	}
+	.small_info span:nth-child(3) {
+    margin-left: 17px;
+	}
+	.price-1 {
+    width: 228px;
+    height: 83px;
+    margin-top: 81px;
+    margin-left: -14px;
+	}
+	.price-1 p {
+    font-size: 11px;
+	}
+	.price-1 span.font-s {
+    font-size: 12px;
+	}
+	.price-1 span {
+    font-size: 16px;
+	}
+	.price-1 p:first-child::before {
+    background-color: #d1c594;
+    bottom: 7px;
+    content: "";
+    display: block;
+    height: 1.5px;
+    position: absolute;
+    left: 31%;
+    width: 77px;
+	}
+	.info .but_border {
+    width: 95px;
+    height: 23px;
+    margin-left: -16px;
+    margin-top: 0;
+    float: left;
+    margin-left: 10px;
+        margin-top: -8px;
+	}
+	.info button.select {
+    font-size: 10px;
+    width: 89px;
+    height: 17px;
+    margin-left: 2px;
+    margin-top: 2px;
+    letter-spacing: 0.8px;
+	}
+	.slick-prev, .slick-next {
+    top: 59%;
+	}
+	.lines .line1 {
+    margin-top: 80px;
+	}
+	.page_akcii .lines p {
+    font-size: 10px;
+    margin-left: -77px;
+	}
+	.up::before {
+    width: 20px;
+    height: 11px;
+    position: absolute;
+    left: 15px;
+    bottom: 19px;
+    content: "";
+    background: url(../images/upd.png) no-repeat center center;
+    transform: rotate(225deg);
+	}
+	.hovicon {
+    width: 55px;
+    height: 55px;
+    margin-left: -35px;
+	}
+	.page_rules h1 {
+    font-size: 24px;
+    letter-spacing: 5.5px;
+    margin-left: 40px;
+    margin-top: 38px;
+	}
+	.page_rules .line {
+    margin-top: 115px;
+	}
+	.page_rules h2.rim::before {
+    width: 0px;
+    height: 0px;
+    background-color: #ffffff;
+     font-size: 58px;
+    position: absolute;
+    bottom: 81px;
+        left: -32px;
+	}
+	.page_rules h2 {
+    font-size: 20px;
+    margin-top: 115px;
+    margin-left: 15px;
+	}
+	.page_rules h2::before {
+    	width: 90px;
+        bottom: 13px;
+    left: -40%;
+	}
+	.page_rules h2::after {
+    width: 90px;
+       bottom: 11px;
+    right: 15%;
+	}
+	.text_show h3 {
+    font-size: 20px;
+	}
+	.text_show h3::before {
+    width: 20px;
+    height: 20px;
+    bottom: 1px;
+    left: -38px;
+	}
+	.text_show p {
+    font-size: 11px;
+    line-height: 16px;
+	}
+	.col-lg-12.text_show {
+		padding-left: 30px !important;
+    padding-right: 30px !important;
+	}
+	a.showall {
+    font-size: 16px;
+    margin-left: 40px;
+    top: 20px;
+	}
+	a.showall::before {
+    width: 39px;
+	}
+	.page_rules h2.rim.rim-2::before {
+    content: 'II';
+    bottom: 65px;
+    left: -37px;
+	}
+	.page_rules h2.rules1 {
+	margin-top: 142px;
+    margin-left: 28px;
+	}
+	.page_rules h2.rules1::before {
+	    left: -44%;
+	}
+	.page_rules h2.rules1::after {
+    right: 16%;
+	}
+	.page_rules h2.rim.rim-3::before {
+    content: 'III';
+    bottom: 70px;
+    left: -76px;
+	}
+	.page_rules h2.rim.rim-3::before {
+    content: 'III';
+    bottom: 70px;
+    left: -51px;
+	}
+	.page_rules h2.rules3::before {
+	bottom: 12px;
+    left: -94%;
+	}
+	.page_rules h2.rules3::after {
+	    bottom: 12px;
+    left: 145%;
+	}
+	.page_rules h2.rules4 {
+    margin-top: 145px;
+    margin-left: 11px;
+	}
+	.page_rules h2.rim.rim-4::before {
+	    content: 'IV';
+	    bottom: 65px;
+	    left: -76px;
+	}
+	.page_rules h2.rules4::before {
+    bottom: 16px;
+    left: -38%;
+	}
+	.page_rules h2.rules4::after {
+    bottom: 16px;
+    right: 15%;
+	}
+	.page_rules h2.rules3 {
+	    margin-top: 37px;
+    margin-left: 22px;
+	}
+	a.showallhide {
+    font-size: 20px;
+    position: relative;
+    top: 20px;
+	}
+	.page_rules .lines .line1 {
+    margin-left: -8px;
+	}
+	.page_rules h4 {
+font-family: 'cormorant-regular';
+    font-size: 18px;
+    color: #d1c594;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 3.4px;
+    margin-left: 38px;
+	}
+	.page_rules h4::after {
+        width: 90px;
+    bottom: 11px;
+    left: 91%;
+	}
+	.page_rules h4::before {
+      width: 90px;
+    bottom: 10px;
+    left: -37%;
+	}
+	.form1 {
+    width: 100%;
+    margin-top: 35px;
+    margin-left: -22px;
+	}
+	.form1 input {
+    width: 30%;
+	}
+	.page_rules {
+    padding-bottom: 165px;
+	}
+	.but_border {
+    width: 160px;
+    height: 32px;
+    margin-left: -16px;
+	}
+	.page_rules button.select {
+    background-color: transparent;
+    border: none;
+    font-size: 12px;
+    color: #d1c594;
+    font-family: 'cormorant-regular';
+    width: 138px;
+    height: 33px;
+    margin-left: 4px;
+    margin-top: 4px;
+    letter-spacing: 1.4px;
+
+	}
+	.page_rules button.select:hover {
+	color:#232437;
+	background-color: #d1c594;
+	border:2px solid transparent;
+	}
+}

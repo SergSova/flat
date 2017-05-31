@@ -1,0 +1,1 @@
+<div class="slider_image slider_image-[[+idx]]"><img src="[[+image]]"></div>

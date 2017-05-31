@@ -1,0 +1,299 @@
+[[$head]]
+</head>
+<body>
+<header>
+    [[$menu]]
+</header>
+<section id="main" class="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 col-sm-offset-5 col-lg-2 col-lg-offset-5">
+                <img class="logo" src="assets/images/flat_logo.png" alt="логотип">
+            </div>
+        </div>
+    </div>
+    [[$text_title_chank]]
+    <form action="#flats" method="get" id="search">
+        <div class="container one">
+            <div class="row">
+                [[!main-filter-init]]
+                <div class="col-lg-12 make_position">
+                    <div class="choose1">
+                        <p class="labell">дата посещения</p>
+                        <div class="calendar">
+                            <p>11.02/13.02.2017</p>
+                        </div>
+                    </div>
+                    <div class="choose2">
+                        <p class="labell">количество комнат</p>
+                        <input type="checkbox" id="room-1" name="rooms[]" value="1"/>
+                        <label for="room-1"><span></span></label>
+                        <input type="checkbox" id="room-2" name="rooms[]" value="2"/>
+                        <label for="room-2"><span></span></label>
+                        <input type="checkbox" id="room-3" name="rooms[]" value="3"/>
+                        <label for="room-3"><span></span></label>
+                        <input type="checkbox" id="room-4" name="rooms[]" value=":>=:4"/>
+                        <label for="room-4"><span></span></label>
+                    </div>
+                    <div class="choose3">
+                        <div>
+                            <p class="labell">стоимость</p>
+                            <input type="checkbox" id="price-one" name="price" value=":<<:[[#6.price-from]]"/>
+                            <label for="price-one"><span></span></label>
+                            <input type="checkbox" id="price-two" name="price"
+                                   value=":>=:[[#6.price-from]]||:<=:[[#6.price-from-to]]"/>
+                            <label for="price-two"><span></span></label>
+                            <input type="checkbox" id="price-three" name="price" value=":>>:[[#6.price-from-to]]"/>
+                            <label for="price-three"><span></span></label>
+                        </div>
+                        <div>
+                            <p class="labell">все</p>
+                            <input type="checkbox" id="all" name="allchecked"/>
+                            <label for="all"><span></span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="javascript:void(0);" class="additional">дополнительные параметры <img
+                        src="assets/images/arrow.png"></a>
+            <div class="row show_add">
+                <div class="col-lg-12">
+                    <div class="choose4">
+                        <div class="form-group">
+                            <form class="filtr_flat">
+                                <div class="multiselect">
+                                    <div class="selectBox">
+                                        <div class="overSelect form-control"><span>Метро</span></div>
+                                    </div>
+                                    <div class="checkboxes">
+                                        [[+metro_options]]
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="choose4">
+                        <div class="form-group">
+                            <form class="filtr_flat">
+                                <div class="multiselect">
+                                    <div class="selectBox">
+                                        <div class="overSelect form-control"><span>Улица</span></div>
+                                    </div>
+                                    <div class="checkboxes">
+                                        [[+street_options]]
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="choose4">
+                        <div class="form-group">
+                            <form class="filtr_flat">
+                                <div class="multiselect">
+                                    <div class="selectBox">
+                                        <div class="overSelect form-control"><span>Удобства</span></div>
+                                    </div>
+                                    <div class="checkboxes">
+                                        [[+facilites_options]]
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="choose4">
+                        <div class="form-group">
+                            <form class="filtr_flat">
+                                <div class="multiselect">
+                                    <div class="selectBox">
+                                        <div class="overSelect form-control"><span>Дополнительно</span></div>
+                                    </div>
+                                    <div class="checkboxes">
+                                        [[+additional_rules]]
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <a href="javascript:void(0);" class="additional">свернуть <img src="assets/images/arrow_up.png"></a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-4 col-lg-3 col-lg-offset-5">
+                    <div class="but_border">
+                        <button class="select">Подобрать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+<section class="page_flats" id="flats" hidden>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1 col-sm-offset-6 col-lg-1 col-lg-offset-6">
+                <div class="line"></div>
+                <div class="rhomb"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <p class="col-lg-10 col-lg-offset-1">
+            <h1>[[#6.pagetitle]]</h1>
+            <p class="description">[[#6.content]]</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-1 col-lg-offset-6">
+            <div class="line3"></div>
+        </div>
+    </div>
+    </div>
+    <div class="container no_padding">
+        <div class="row">
+            <div class="col-lg-10">
+                <ul class="sort_by">
+                    <li>Сортировать по:</li>
+                    <li><a href="#" name="price">Цене
+                            <div class="min"></div>
+                            <div class="max"></div>
+                        </a></li>
+                    <li><a href="#" name="status">Новизне
+                            <div class="min"></div>
+                            <div class="max"></div>
+                        </a></li>
+                    <li><a href="#" name="comments">По отзывам
+                            <div class="min"></div>
+                            <div class="max"></div>
+                        </a></li>
+                    <li><a href="#" name="rooms">По количеству комнат
+                            <div class="min"></div>
+                            <div class="max"></div>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-lg-offset-0">
+                <div class="plitka"></div>
+                <div class="map"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 no_padding" id="list-apartments">
+                [[!filter_apartment]]
+            </div>
+        </div>
+        <div class="container lines">
+            <div class="row">
+                <div class="col-lg-1 col-lg-offset-6">
+                    <div class="line1"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1 col-lg-offset-6">
+                    <p class="to_top">наверх</p>
+                    <a href="[[~[[*id]]]]#flats">
+                        <div class="up hovicon effect-1 sub-a"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1 col-lg-offset-6">
+                    <div class="rhomb"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+</section>
+<section id="akcii" class="page_akcii">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1 col-sm-offset-6 col-lg-1 col-lg-offset-6">
+                <div class="line"></div>
+                <div class="rhomb"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h1>[[#79.pagetitle]]</h1>
+                <div class="col-lg-10 col-lg-offset-1 text_top">[[#79.content]]</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1 col-sm-offset-6 col-lg-1 col-lg-offset-6">
+                <div class="line3"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container no_padding">
+        <div class="row">
+            <div class="col-lg-12 no_padding">
+                [[getResources?
+                &parents=`6`
+                &showHidden=`1`
+                &includeTVs=`1`
+                &tvPrefix=``
+                &limit=`6`
+                &tvFilters=`old_price>>0`
+                &sortbyTV=`status`
+                &sortdirTV=`ASC`
+                &tpl=`filtred_apartment-item-TPL`
+                ]]
+            </div>
+        </div>
+        <div class="container lines">
+            <div class="row">
+                <div class="col-sm-1 col-sm-offset-6 col-lg-1 col-lg-offset-6">
+                    <div class="line1"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-6 col-lg-3 col-lg-offset-6">
+                    <a href="[[~79]]?actions=1"><p class="to_top">Все акционные квартиры</p></a>
+                    <div class="up hovicon effect-1 sub-a"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1 col-sm-offset-6 col-lg-1 col-lg-offset-6">
+                    <div class="rhomb"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+</section>
+[[!printResource?&id=`50` &tpl=`rules_chank`]]
+[[!printResource?&id=`51` &tpl=`about_chank`]]
+[[!printResource?&id=`52` &tpl=`turistam_chank`]]
+[[!printResource?&id=`65` &tpl=`news_chank`]]
+
+<div class="popup_callback">
+    <h6>Обратный звонок</h6>
+    <form class="form1">
+        <input type="number" name="phone" placeholder="ВАШ НОМЕР ТЕЛЕФОНА">
+    </form>
+    <div class="but_border">
+        <button class="select">задать вопрос</button>
+    </div>
+    <div class="close_popup">
+        <a href="javascript:void(0)"></a>
+    </div>
+</div>
+[[!printResource?&id=`2` &tpl=`contact_chank`]]
+<div id="overlay"></div>
+[[$foot]]
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuKGM5Uyp8zEcgsODy7nxVwFIEgEgLJ_k"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="assets/plagins/slick/slick/slick.min.js"></script>
+<script src="assets/plagins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+</body>
+</html>
